@@ -33,11 +33,9 @@ class ColorSquare{
 		make sure it only sets the neighbor if it is the right class constructor (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)
 		if it is the right constructor, set the neightbor
 	*/
-
-	
-	set neighbor(newNeighbor){
-		if (newNeighbor.constructor === ColorSquare){
-			this.rightNeighbor = newNeighbor;
+	set neighbor(neighborObject){
+		if (neighborObject.constructor === ColorSquare){
+			this.rightNeighbor = neighborObject;
 			return true;
 		} else {
 			return false;
